@@ -1,0 +1,31 @@
+### GET ALL USERS
+
+GET http://localhost:3000/users
+Content-Type: application/json
+
+### GET ALL USERS by id
+
+GET http://localhost:3000/users/1
+Content-Type: application/json
+
+
+### POST NEW USER
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "email": "admin3",
+    "password": "admin"
+}
+
+### POST login
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "admin",
+    "password": "admin"
+}
