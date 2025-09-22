@@ -1,15 +1,25 @@
-### GET ALL USERS
+### GET ALL USERS (Összes felhasználó lekérése)
 
 GET http://localhost:3000/users
 Content-Type: application/json
 
-### GET ALL USERS by id
+### GET ALL USERS by id (Egy felhasználó lekérése ID alapján)
 
 GET http://localhost:3000/users/1
 Content-Type: application/json
 
 
-### POST NEW USER
+### POST LOGGED USER (Bejelentkezés)
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "admin",
+    "password": "admin"
+}
+
+### POST NEW USER (Felhasználó regisztrálása)
 
 POST http://localhost:3000/users
 Content-Type: application/json
@@ -20,12 +30,24 @@ Content-Type: application/json
     "password": "admin"
 }
 
-### POST login
+### PATCH USER DATA (Felhasználói adatok módosítása)
 
-POST http://localhost:3000/users/login
+PATCH http://localhost:3000/users/profile
 Content-Type: application/json
 
 {
+    "id": 1,
+    "name": "admin",
     "email": "admin",
-    "password": "admin"
+}
+
+### PATCH USER PASSWORD (Jelszó módosítása)
+
+PATCH http://localhost:3000/users/profile
+Content-Type: application/json
+
+{
+    "id": 1,
+    "oldPassword": "admin",
+    "newPassword": "admin",
 }

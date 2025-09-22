@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
     res.send({ title: "Regisztráció!", message: 'A felhasználó sikeresen regisztált!', type: "success"})
 });
 
-//PATCH USER (Felhasználói adatok módosítása)
+//PATCH USER DATA(Felhasználói adatok módosítása)
 
 router.patch("/profile", (req, res) => {
     const { id, name, email } = req.body;
@@ -68,6 +68,8 @@ router.patch("/profile", (req, res) => {
 
     return res.status(200).send({ title: "Módosítva!", message: "A profil sikeresen módosítva!", type: "success" });
 });
+
+//PATCH USER PASSWORD (Jelszó módosítása)
 
 router.patch("/password", (req, res) => {
     const { id, oldPassword, newPassword } = req.body;
