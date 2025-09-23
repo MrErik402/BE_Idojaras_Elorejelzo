@@ -1,0 +1,28 @@
+### GET ALL WEATHER (Összes időjárásadat lekérése)
+
+GET http://localhost:3000/weather/
+Content-Type: application/json
+
+### GET ALL WEATHER by USER ID (Összes időjárásadat lekérése felhasználó azonosoító alapján)
+
+GET http://localhost:3000/weather/2
+Content-Type: application/json
+
+### POST NEW WEATHER (Időjárás regisztrálása)
+
+POST http://localhost:3000/weather
+Content-Type: application/json
+
+{
+    "userId": 3,
+    "date": "2025-09-23",
+    "min": "10",
+    "max": "12",
+    "type": "Zivataros"
+}
+
+### DELETE ONE WEATHER by ID (Időjárás törlése ID alapján)
+
+DELETE http://localhost:3000/weather/1
+Content-Type: application/json
+

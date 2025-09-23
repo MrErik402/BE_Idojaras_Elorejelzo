@@ -58,6 +58,17 @@ function isEmailExists(email) {
     return exists
 }
 
+function isDateExists(date, id){
+    let exists = false
+    weather.forEach(day => {
+        if (day.date == date && day.userId == id) {
+            exists = true
+            return;
+        }
+    });
+    return exists
+}
+
 /*----------Felhasználnói adatok kezelése---------*/
 
 function loadUsers() {
@@ -101,6 +112,7 @@ module.exports = {
     saveWeather,
     getNextID,
     isEmailExists,
+    isDateExists,
     users,
     weather
 }
