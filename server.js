@@ -9,8 +9,8 @@ const app = express()
 
 //Middlewarek
 app.use(cors());
-app.use(express.json()) 
-app.use(express.urlencoded({ extended: true })) 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 //Endpointok
 
@@ -21,6 +21,6 @@ app.get('/', (_req, res) => {
 app.use("/users", userRoutes);
 app.use("/weather", weatherRoutes);
 
-app.listen(3000, ()=>{
+app.listen(3000, () => {
     console.log('Server listening on http://localhost:3000')
 });

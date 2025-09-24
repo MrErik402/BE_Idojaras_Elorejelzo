@@ -3,10 +3,10 @@ const path = require('path');
 
 let users = []
 let weather = []
-const USERS_FILE = path.join(__dirname,'..','database','users.json');
-const WEATHER_FILE = path.join(__dirname,'..','database','weather.json');
+const USERS_FILE = path.join(__dirname, '..', 'database', 'users.json');
+const WEATHER_FILE = path.join(__dirname, '..', 'database', 'weather.json');
 
-function initStore(){
+function initStore() {
     loadUsers();
     loadWeather();
 }
@@ -44,9 +44,10 @@ function getNextID(type) {
                 }
             }
             return weather[maxindex].id + 1;
-            
+
     }
 }
+
 function isEmailExists(email) {
     let exists = false
     users.forEach(user => {
@@ -58,7 +59,7 @@ function isEmailExists(email) {
     return exists
 }
 
-function isDateExists(date, id){
+function isDateExists(date, id) {
     let exists = false
     weather.forEach(day => {
         if (day.date == date && day.userId == id) {
@@ -82,6 +83,7 @@ function loadUsers() {
         }
     }
 }
+
 function saveUsers() {
     fs.writeFileSync(USERS_FILE, JSON.stringify(users))
     loadUsers()
@@ -99,6 +101,7 @@ function loadWeather() {
         }
     }
 }
+
 function saveWeather() {
     fs.writeFileSync(WEATHER_FILE, JSON.stringify(weather))
 }

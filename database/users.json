@@ -1,1 +1,14 @@
-[{"name":"Admin János","email":"adminHU@gmail.com","password":"Ab123456","id":1},{"name":"admin","email":"admin1","password":"admin","id":2}]
+[
+    {
+        "name": "admin1",
+        "email": "admin4@gmail.com",
+        "password": "Ab123456",
+        "id": 1
+    },
+    {
+        "name": "admin",
+        "email": "admin1",
+        "password": "admin",
+        "id": 2
+    }
+]

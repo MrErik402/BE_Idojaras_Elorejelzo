@@ -37,8 +37,8 @@ Content-Type: application/json
 
 {
     "id": 1,
-    "name": "admin",
-    "email": "admin",
+    "name": "admin1",
+    "email": "admin4@gmail.com"
 }
 
 ### PATCH USER PASSWORD (Jelszó módosítása)
